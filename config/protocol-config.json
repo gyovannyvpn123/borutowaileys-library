@@ -1,0 +1,100 @@
+{
+  "version": "1.0.0",
+  "monitoring": {
+    "strategy": "hybrid",
+    "pollingInterval": 3600000,
+    "runtimeChecksEnabled": true,
+    "errorThreshold": 5,
+    "updateEndpoints": [
+      "https://web.whatsapp.com/check-update",
+      "https://web.whatsapp.com/client_version"
+    ]
+  },
+  "userAgent": "WhatsApp/2.2345.12 (Web)",
+  "options": {
+    "autoUpdateAdapters": true,
+    "notifyOnUpdate": true,
+    "logLevel": "info",
+    "remoteReporting": false
+  },
+  "features": [
+    {
+      "id": "sendMessage",
+      "name": "Message Sending",
+      "endpoints": ["message", "text", "chat"],
+      "defaultImplementation": "message-sending-v2.2345.12"
+    },
+    {
+      "id": "sendMedia",
+      "name": "Media Message Sending",
+      "endpoints": ["media", "image", "video", "audio", "document"],
+      "defaultImplementation": "message-sending-v2.2345.12"
+    },
+    {
+      "id": "messageParser",
+      "name": "Message Parsing",
+      "endpoints": ["receive", "notification", "event"],
+      "defaultImplementation": "message-receiving-v2.2345.12"
+    },
+    {
+      "id": "notificationHandler",
+      "name": "Notification Handling",
+      "endpoints": ["notify", "presence", "status"],
+      "defaultImplementation": "message-receiving-v2.2345.12"
+    },
+    {
+      "id": "getContacts",
+      "name": "Contact Management",
+      "endpoints": ["contacts", "chats", "users"],
+      "defaultImplementation": "contact-management-v2.2345.12"
+    },
+    {
+      "id": "getProfile",
+      "name": "Profile Management",
+      "endpoints": ["profile", "info", "about"],
+      "defaultImplementation": "contact-management-v2.2345.12"
+    }
+  ],
+  "versionCompatibility": [
+    {
+      "version": {
+        "major": 2,
+        "minor": 2345,
+        "patch": 12,
+        "fullVersion": "2.2345.12"
+      },
+      "adapters": [
+        "message-sending-v2.2345.12",
+        "message-receiving-v2.2345.12",
+        "contact-management-v2.2345.12"
+      ]
+    },
+    {
+      "version": {
+        "major": 2,
+        "minor": 2300,
+        "patch": 0,
+        "fullVersion": "2.2300.0"
+      },
+      "adapters": [
+        "message-sending-v2.2300.0",
+        "message-receiving-v2.2300.0",
+        "contact-management-v2.2300.0"
+      ]
+    }
+  ],
+  "endpointPatterns": {
+    "sendMessage": {
+      "v2.2345.12": "/v1/messages",
+      "v2.2300.0": "/messages/send"
+    },
+    "sendMedia": {
+      "v2.2345.12": "/v1/media",
+      "v2.2300.0": "/media/upload"
+    },
+    "getContacts": {
+      "v2.2345.12": "/v1/contacts",
+      "v2.2300.0": "/contacts/all"
+    }
+  }
+}
