@@ -1,22 +1,4 @@
 
-
-<!-- Banner BorutoWaileys -->
-<div align="center">
-
-```text
- ____                  _               __        __               
-|  _ \ _ __ ___  _   _| |_ ___  _ __   \ \      / /__  _ __ _   _ 
-| |_) | '__/ _ \| | | | __/ _ \| '__|   \ \ /\ / / _ \| '__| | | |
-|  __/| | | (_) | |_| | || (_) | |       \ V  V / (_) | |  | |_| |
-|_|   |_|  \___/ \__,_|\__\___/|_|        \_/\_/ \___/|_|   \__, |
-                                                            |___/
-
-
-
-
-
-
-
 # @borutowaileys/library
 
 A powerful library for building WhatsApp applications and bots.
