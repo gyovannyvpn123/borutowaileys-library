@@ -1,6 +1,6 @@
 {
   "name": "@borutowaileys/library",
-  "version": "6.12.9",
+  "version": "6.12.10",
   "description": "A powerful enhanced library for building WhatsApp applications and bots",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
