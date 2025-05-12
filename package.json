@@ -1,0 +1,112 @@
+{
+  "name": "@borutowaileys/library",
+  "version": "6.10.0",
+  "description": "A powerful enhanced library for building WhatsApp applications and bots",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "whatsapp",
+    "js-whatsapp",
+    "whatsapp-api",
+    "whatsapp-web",
+    "whatsapp-chat",
+    "whatsapp-group",
+    "automation",
+    "multi-device"
+  ],
+  "author": {
+    "name": "Boruto Wailey"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyovannyvpn123/-borutowaileys-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gyovannyvpn123/-borutowaileys-library/issues"
+  },
+  "homepage": "https://github.com/gyovannyvpn123/-borutowaileys-library#readme",
+  "scripts": {
+    "lint": "eslint src --ext .js,.ts",
+    "test": "jest",
+    "example": "node --inspect -r ts-node/register Example/example.ts",
+    "prepack": "echo 'Skipping TypeScript compile'",
+    "prepare": "echo 'Skipping TypeScript prepare'",
+    "release": "release-it",
+    "lint:fix": "yarn lint --fix",
+    "build:all": "echo 'Skipped building'",
+    "build:tsc": "echo 'Skipped TypeScript compile'",
+    "build:docs": "echo 'Skipped docs generation'",
+    "gen:protobuf": "echo 'Skipped protobuf generation'",
+    "changelog:last": "conventional-changelog -p angular -r 2",
+    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog:preview": "conventional-changelog -p angular -u"
+  },
+  "maintainers": [
+    {
+      "name": "borutowailey",
+      "email": "contact@borutowailey.com"
+    }
+  ],
+  "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@cacheable/node-cache": "^1.4.0",
+    "@hapi/boom": "^9.1.3",
+    "async-lock": "^1.4.1",
+    "audio-decode": "^2.1.3",
+    "axios": "^1.6.0",
+    "cache-manager": "^5.7.6",
+    "libphonenumber-js": "^1.10.20",
+    "libsignal": "^2.0.1",
+    "lodash": "^4.17.21",
+    "music-metadata": "^7.12.3",
+    "pino": "^9.6",
+    "protobufjs": "^7.2.4",
+    "uuid": "^10.0.0",
+    "ws": "^8.13.0",
+    "tesseract.js": "^4.1.1",
+    "jimp": "^0.22.10"
+  },
+  "devDependencies": {
+    "@types/got": "^9.6.11",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.0.0",
+    "@types/sharp": "^0.29.4",
+    "@types/ws": "^8.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.0.0",
+    "jest": "^27.0.6",
+    "jimp": "^0.16.1",
+    "json": "^11.0.0",
+    "link-preview-js": "^3.0.0",
+    "open": "^8.4.2",
+    "qrcode-terminal": "^0.12.0",
+    "release-it": "^15.10.3",
+    "sharp": "^0.32.6",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.8.1",
+    "typedoc": "^0.24.7",
+    "typescript": "^4.6.4"
+  },
+  "peerDependencies": {
+    "jimp": "^0.16.1",
+    "link-preview-js": "^3.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.32.6"
+  },
+  "peerDependenciesMeta": {
+    "jimp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    },
+    "qrcode-terminal": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    }
+  },
+  "packageManager": "yarn@1.22.19"
+}
